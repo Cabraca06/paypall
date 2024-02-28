@@ -1,0 +1,364 @@
+
+body {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "pp-sans-small-regular", Helvetica Neue, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  z-index: -1;
+  top: 0px;
+  transition: all 0ms linear 0s;
+ }
+
+.hero-down {
+  top: 230px;
+  transition: all 200ms linear 0s;
+}
+
+.nav {
+  position: absolute;
+  background: rgba(0, 0, 0, .2);
+  width: 100%;
+  height: 65px;
+  padding: 0px 0px;
+  color: #fff;
+  margin: 0;
+  background: rgba(0, 0, 0, .2);
+}
+
+
+.nav-background {
+  background: radial-gradient(circle, #44b5ff 10%, #0051ba);
+  transition: background 200ms linear .5s;
+}
+
+.nav-logo {
+  position: relative;
+  display: inline-block;
+  left: 75px;
+  top: -7px;
+  width: 150px;
+  padding: 0px 0px;
+  z-index: 3;
+}
+
+.nav-logo img {
+  width: 125px;
+  height: 32px;
+  padding: 7px 7px;
+  border: 1px solid transparent;
+  &:active {
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 2px #fff;
+  }
+}
+
+.nav-links {
+  position: relative;
+  left: 0;
+  top: -8px;
+  padding: 0px 40px;
+  display: inline-block;
+  margin: auto;
+  width: 550px;
+}
+
+
+.nav-link-header {
+  color: #fff;
+  position: relative;
+  float: left;
+  top: 12px;
+  left: 175px;
+  padding: 17px 17px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  z-index: 2;
+  &:hover {
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.underline {
+  border-bottom: 3px solid #fff;
+}
+
+span {
+  opacity: 0.75;
+  content: "";
+  display: inline-block;
+  position: relative;
+  left: 6px;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.down-arrow {
+  transform: rotate(45deg);
+  transition: transform 300ms linear;
+}
+
+.up-arrow {
+  transform: rotate(-135deg);
+  transition: transform 300ms linear;
+  top: 2px;
+}
+
+.nav-buttons {
+  display: inline-block;
+  position: relative;
+  top: -30px;
+  left: 150px;
+  width: 200px;
+  margin: auto;
+  padding: 30px 0px;
+}
+
+.nav-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 10px 19px;
+  font-weight: bold;
+  font-size: .7rem;
+  text-decoration: none;
+  &:active {
+    text-decoration: underline;
+  }
+  &:focus{
+    outline: 0;
+  }
+}
+
+#login {
+  color: #fff;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+#signup {
+  background-color: #fff;
+}
+
+.nav-seperator-bar {
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  width: 100%;
+  margin: 0;
+}
+
+.nav-section-dropdown {
+  position: absolute;
+  text-wrap: wrap;
+  width: 1200px;
+  height: 0px;
+  overflow-y:hidden;
+  transition: all 200ms linear;
+  left: -154px;
+  top: 72px;
+  margin: 0;
+  background:radial-gradient(circle, #44b5ff 10%, #0051ba);
+}
+
+.slideDown {
+  height: 180px;
+  transition: all 200ms linear; 
+
+}
+
+.remove {
+  display: none;
+}
+
+.dropdown .dropdown-menu {
+  width: 95%;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.dropdown-menu li {
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+}
+
+.personal-links,
+.business-links,
+.send-links {
+  text-decoration: none;
+  color: #fff;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.personal-links p {
+  font-size: 10px;
+}
+
+.business-links p {
+  font-size: 10px;
+}
+
+
+
+.escape {
+  position: absolute;
+  left: 1090px;
+  top: 25px;
+  padding: 1px 3px;
+  z-index: 1;
+  &:active {
+    border: 1px solid #fff;
+    border-radius: 5px;
+  }
+}
+
+.hairline {
+  position: relative;
+  display: inline-block;
+  top: 3px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border: none;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: rgba(255, 255, 255, .8);
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.section1{
+    width: 300px;
+    height: 400px;
+    margin-left: 20%;  
+    
+
+}
+
+.section2{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    background-color: #fff;
+    color: #0051ba;
+    border: 2px rgb(37, 36, 36) solid;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+
+
+#p1:hover{
+    background-color: aliceblue;
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border-top-right-radius:20px ;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#p2:hover{
+    background-color: aliceblue;
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border-top-right-radius:20px ;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#text1{
+    width: 300px;
+    height: 400px;
+    font-size: 40px;
+    font-size: clamp(2.027rem, -.016428571428571015rem + 3.1928571428571426vw, 3.815rem);
+    color: var(--style-headline-text);
+    font-family: PayPalOpen-Bold, Helvetica Neue, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -.015em;
+}
+#boton {
+    background-color: #fff;
+    color: #000;
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border-top-right-radius:20px ;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    border-radius: 1000px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 6rem;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    -webkit-transition: color 0.20s ease, background-color 0.20s ease, border-color 0.20s ease, box-shadow 0.20s ease;
+    transition: color 0.20s ease, background-color 0.20s ease, border-color 0.20s ease, box-shadow 0.20s ease;
+    border: 0.125rem solid #003087;
+    color: #262097;
+    font-family: PayPalOpen-Bold, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    background-color: #e8ebf1;
+    padding: 0.625rem 1.875rem;
+}
+
+#boton:hover{
+    background-color: rgb(90, 157, 215);
+    color: rgb(17, 17, 126);
+}
